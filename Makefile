@@ -1,21 +1,20 @@
-EXEC=python
+EXEC=python3
 
 all: start
 
 start:
-	@ $(EXEC) bot.py 2&> log &
+	@ $(EXEC) bot.py > log 2>&1 &
 	@ echo "Bot running."
 
 install:
 	$(EXEC) -m pip install discord
 	$(EXEC) -m pip install discord.py
 	$(EXEC) -m pip install matplotlib
-	$(EXEC) -m pip install numpy
+	apt install python3-numpy
 
 update:
 	$(EXEC) -m pip install --upgrade pip
 	$(EXEC) -m pip install --upgrade discord
 	$(EXEC) -m pip install --upgrade discord.py
 	$(EXEC) -m pip install --upgrade matplotlib
-	$(EXEC) -m pip install --upgrade numpy
 

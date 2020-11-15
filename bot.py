@@ -18,7 +18,7 @@ from actions.graphe import Graphe
 
 
 
-SECTION = "TEST"
+SECTION = "DEFAULT"
 COMMON = "COMMON"
 CONFIG_PATH = "ressources/config.ini"
 
