@@ -73,8 +73,7 @@ async def displayMessage(message):
         logger.debug("In server : %s", message.guild)
         serverNameOrPrivate = message.guild.name
         channelName = message.channel.name
-        authorHasNickname = message.author.nick is not None
-        authorName = message.author.nick if authorHasNickname else message.author.name
+        authorName = message.author.display_name
     logger.info("(%s) [%s] %s : %s", serverNameOrPrivate, channelName, authorName, message_content)
 
 
