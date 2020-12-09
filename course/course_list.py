@@ -37,8 +37,7 @@ class CourseList:
             if course_message.message_course.author.id == runner_id:
                 course_list.append(course_message)
                 message = course_message.message_course
-                authorHasNickname = message.author.nick is not None # must be in server
-                runner_nickname = message.author.nick if authorHasNickname else message.author.name
+                runner_nickname = message.author.display_name
         course_list.sort()
         
         date_list, distance_list, vitesse_list = [], [], []
