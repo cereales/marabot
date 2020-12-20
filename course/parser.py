@@ -62,7 +62,7 @@ def extract_time(string):
             second = int(string)
 
         timedelta = d.timedelta(hours=heure, minutes=minute, seconds=second)
-        time = d.time(hour=heure, minute=minute, second=second)
+        time = d.time(hour=heure, minute=minute, second=second) # Need values in 0..59
         if timedelta.total_seconds() == 0:
             raise ValueError
         return True, time, timedelta
